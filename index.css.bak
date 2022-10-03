@@ -44,13 +44,14 @@ nav .container{
 	color:#000;
 	text-decoration: none;
 	font-weight:bold;
+	font-size:28px;
 	line-height:50px;
 	padding: 0 1em;
 	//transform: scale(0);
 }
     
 .menu a:hover{
-    background-color:  #ccc;
+    background-color:  #000;
     color:#fff;
 	transition:0.3s;
 	
