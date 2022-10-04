@@ -10,14 +10,14 @@
 				<div class="logo">
 					
 					<a href="#">
-					logo
+					CISLab<!--logo-->
 					</a>
 				</div>
 				<ul class="menu">
-					<li><a href="#">About</a><li>
-					<li><a href="#">Members</a><li>
-					<li><a href="#">Publications</a><li>
-					<li><a href="#">Contact</a><li>
+					<li><a href="#About">About</a><li>
+					<li><a href="#Members">Members</a><li>
+					<li><a href="#Publications">Publications</a><li>
+					<li><a href="#Contact">Contact</a><li>
 					
 				</ul>
 			</div>
@@ -26,8 +26,24 @@
 			
 		</header>
 		<main>
-			<article>
+			<article id="About">
 				<section>
+				about
+				</section>
+			</article>
+			<article id="Members">
+				<section>
+				members
+				</section>
+			</article>
+			<article id="Publications">
+				<section>
+				publications
+				</section>
+			</article>
+			<article id="Contact">
+				<section>
+				contact
 				</section>
 			</article>
 		</main>
