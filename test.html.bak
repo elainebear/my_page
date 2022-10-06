@@ -2,6 +2,7 @@
 <html>
 	<head>
 	<link rel=stylesheet type="text/css" href="index.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 	</head>
 	<body>
 		<nav>
@@ -10,14 +11,15 @@
 				<div class="logo">
 					
 					<a href="#">
-					CISLab<!--logo-->
+					LOGO<!--logo-->
 					</a>
 				</div>
 				<ul class="menu">
-					<li><a href="#About">About</a><li>
-					<li><a href="#Members">Members</a><li>
-					<li><a href="#Publications">Publications</a><li>
-					<li><a href="#Contact">Contact</a><li>
+					<li id="item1"><a href="#About">About</a><li>
+					<li  id="item2"><a href="#Members">Members</a><li>
+					<li id="item3"><a href="#Project">Project</a><li>
+					<li id="item4"><a href="#Publications">Publications</a><li>
+					<li id="item5"><a href="#Contact">Contact</a><li>
 					
 				</ul>
 			</div>
@@ -31,9 +33,15 @@
 				about
 				</section>
 			</article>
+			
 			<article id="Members">
 				<section>
 				members
+				</section>
+			</article>
+			<article id="Project">
+				<section>
+				Project
 				</section>
 			</article>
 			<article id="Publications">
@@ -46,8 +54,163 @@
 				contact
 				</section>
 			</article>
+			
 		</main>
 		<footer>
+			<div class="container">
+			footer
+			</div>
 		</footer>
+
 	</body>
+
 </html>
+
+<script>
+	
+	function getTop() {
+		var scroll = $(document).scrollTop();
+		if (scroll > 0) {
+			$("nav").css({ 
+			'box-shadow': '0 5px 10px 0 rgba(0,0,0,.1)',
+			'position':'sticky',
+			'top': '0',
+			'background-color':'#fff',
+			});
+		} else {
+			$("nav").css({
+				'box-shadow': '0 0 0 0 #000', //默认显示css属性
+				});
+		}
+		setTimeout(getTop);
+	}
+	getTop();
+	
+	$(document).ready(() => {
+            //滾動事件
+  $(document).scroll(() => {
+    let Nav = $('nav').offset().top;
+	let header = $('header').offset().bottom;
+    let item1 = $('article#About').offset().top; 
+    let item2 = $('article#Members').offset().top; 
+    let item3 = $('article#Project').offset().top;
+	let item4 = $('article#Publications').offset().top;
+	let item5 = $('article#Contact').offset().top; 
+    //$('div#debug_msg').text(`Nav.top: ${topNav}, 商品介紹: ${top01}, 規格說明: ${top02}, 運送方式: ${top03}`); for debug
+	if(Nav > header){ //當 nav 滾到 item1 的區域內
+		$("li#item1 a").css({'color':'#000',});
+		
+		
+		///$("li#item2").css({'background-color':'#fff',});
+		$("li#item2 a").css({'color':'#000',});
+		
+		//$("li#item3").css({'background-color':'#fff',});
+		$("li#item3 a").css({'color':'#000',});
+		
+		//$("li#item4").css({'background-color':'#fff',});
+		$("li#item4 a").css({'color':'#000',});
+		
+		//$("li#item5").css({'background-color':'#fff',});
+		$("li#item5 a").css({'color':'#000',});
+    }
+	if(Nav > (item1-200)){ //當 nav 滾到 item1 的區域內
+		$("li#item1").css({'background-image': 'linear-gradient(45deg, #F37335, #FDC830 80%)',
+		'-webkit-background-clip': 'text', /* 背景裁剪成文字的前景色 */
+		'background-clip': 'text',
+		});
+		$("li#item1 a").css({'color':'transparent',});
+		
+		
+		///$("li#item2").css({'background-color':'#fff',});
+		$("li#item2 a").css({'color':'#000',});
+		
+		//$("li#item3").css({'background-color':'#fff',});
+		$("li#item3 a").css({'color':'#000',});
+		
+		//$("li#item4").css({'background-color':'#fff',});
+		$("li#item4 a").css({'color':'#000',});
+		
+		//$("li#item5").css({'background-color':'#fff',});
+		$("li#item5 a").css({'color':'#000',});
+    }
+    if(Nav > (item2-200)){ //當 nav 滾到 area02 的區域內
+		$("li#item2").css({'background-image': 'linear-gradient(45deg, #F37335, #FDC830 80%)',
+		'-webkit-background-clip': 'text', /* 背景裁剪成文字的前景色 */
+		'background-clip': 'text',
+		});
+		$("li#item2 a").css({'color':'transparent',});
+		
+		//$("li#item1").css({'background-color':'#fff',});
+		$("li#item1 a").css({'color':'#000',});
+		
+		///$("li#item3").css({'background-color':'#fff',});
+		$("li#item3 a").css({'color':'#000',});
+		
+		///$("li#item4").css({'background-color':'#fff',});
+		$("li#item4 a").css({'color':'#000',});
+		
+		///$("li#item5").css({'background-color':'#fff',});
+		$("li#item5 a").css({'color':'#000',});	
+    }
+    if(Nav > (item3-200)){ //當 nav 滾到 area02 的區域內
+		$("li#item3").css({'background-image': 'linear-gradient(45deg, #F37335, #FDC830 80%)',
+		'-webkit-background-clip': 'text', /* 背景裁剪成文字的前景色 */
+		'background-clip': 'text',
+		});
+		$("li#item3 a").css({'color':'transparent',});
+		
+		//$("li#item1").css({'background-color':'#fff',});
+		$("li#item1 a").css({'color':'#000',});
+		
+		//$("li#item2").css({'background-color':'#fff',});
+		$("li#item2 a").css({'color':'#000',});
+		
+		//$("li#item4").css({'background-color':'#fff',});
+		$("li#item4 a").css({'color':'#000',});
+		
+		//$("li#item5").css({'background-color':'#fff',});
+		$("li#item5 a").css({'color':'#000',});
+    }
+	if(Nav > (item4-200)){ //當 nav 滾到 area02 的區域內
+		$("li#item4").css({'background-image': 'linear-gradient(45deg, #F37335, #FDC830 80%)',
+		'-webkit-background-clip': 'text', /* 背景裁剪成文字的前景色 */
+		'background-clip': 'text',
+		});
+		$("li#item4 a").css({'color':'transparent',});
+		
+		//$("li#item1").css({'background-color':'#fff',});
+		$("li#item1 a").css({'color':'#000',});
+		
+		//$("li#item2").css({'background-color':'#fff',});
+		$("li#item2 a").css({'color':'#000',});
+		
+		//$("li#item3").css({'background-color':'#fff',});
+		$("li#item3 a").css({'color':'#000',});
+		
+		//$("li#item5").css({'background-color':'#fff',});
+		$("li#item5 a").css({'color':'#000',});	
+    }
+	if(Nav > (item5-200)){ //當 nav 滾到 area02 的區域內
+		$("li#item5").css({'background-image': 'linear-gradient(45deg, #F37335, #FDC830 80%)',
+		'-webkit-background-clip': 'text', /* 背景裁剪成文字的前景色 */
+		'background-clip': 'text',
+		});
+		$("li#item5 a").css({'color':'transparent',});
+		
+		//$("li#item1").css({'background-color':'#fff',});
+		$("li#item1 a").css({'color':'#000',});
+		
+		//$("li#item2").css({'background-color':'#fff',});
+		$("li#item2 a").css({'color':'#000',});
+		
+		//$("li#item3").css({'background-color':'#fff',});
+		$("li#item3 a").css({'color':'#000',});
+		
+		//$("li#item4").css({'background-color':'#fff',});
+		$("li#item4 a").css({'color':'#000',});	
+    }
+	
+  });
+});
+	
+</script>
