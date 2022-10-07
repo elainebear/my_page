@@ -156,7 +156,7 @@ nav .container{
 }
 
 header{
-	height:calc(100vh - 50px);
+	height:110vh ;
 	background-image: url("pt/header.jpg");
 	max-width:100%;
 	background-size: cover;
@@ -165,6 +165,22 @@ header{
 	//background-color:#ccc;
 	//padding:5px;
 }
+
+header .container{
+	width:80%;
+	margin:0 auto;
+}
+.text-area{
+	//background-color:#000;
+	//opacity:0.5;
+	margin-top:250px;
+}
+.text{
+	text-align:center;
+	color:#fff;
+	font-size:100px;
+}
+	
 body{
 	display:flex;
 	flex-direction:column;
@@ -179,7 +195,10 @@ article{
 	margin:0px auto;
 	margin-top:100px;
 	background-color:#ccc;
-	//padding:5px;
+	padding:10px;
+}
+h1{
+	font-size:50px;
 }
 section{
 	
